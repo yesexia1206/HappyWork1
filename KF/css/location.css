@@ -1,0 +1,1092 @@
+/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/*# sourceMappingURL=style.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        /*西文*/
+        /*中文*/
+        "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    /* 光學尺寸 */
+    line-height: 1.5;
+    color: #494949;
+    background-image: url(/images/background-1.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 重置標題字重 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置清單符號 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
+
+/* 重置連接 */
+a {
+    display: block;
+    /* 將a預設inline改為block，才能設定間距及寬高 */
+    color: #494949;
+    text-decoration: none;
+}
+
+
+
+
+
+/* 進度條 */
+html {
+    scroll-timeline: --page-scroll block;
+}
+
+@keyframes grow-progress {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: #002ead;
+    transform-origin: 0 0;
+    /* 修改这里的 transform-origin */
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 9999;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 首頁 */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: #FFF;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+
+#topbar .logo {
+    width: 100px;
+}
+
+.logoBar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navigation img {
+    width: 100px;
+}
+
+.navigation a {
+    background-color: #48A0F0;
+    border: none;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.navigation a:hover {
+    background-color: #002ead;
+    transition: 0.7s;
+}
+
+#topbar .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+#topbar .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#topbar a:visited {
+
+    color: #494949;
+
+}
+
+#topbar a:hover {
+    color: #48A0F0;
+}
+
+#topbar li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 40px;
+}
+
+
+/* 手機以上尺寸 */
+@media (min-width: 641px) {
+    #topbar .hamburger {
+            display: none
+        }
+}
+
+/* 手機版 */
+@media (max-width: 640px) {
+    #topbar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .navigation .menu{
+        flex-direction: column;
+                    order: -1;
+    }
+    .logoBar h2{
+        display: none;
+    }
+    .hamburger {
+        /* 修改button預設樣式 */
+        background-color: transparent;
+        border: none;
+    }
+    .navbar .hamburger .bar{
+        background-color: #494949;
+        width: 24px;
+        height: 2px;
+        margin: 5px auto;
+        transition: .4s;
+    }
+    .hamburger.is-active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(6px) translateX(5px);
+    }
+    .hamburger.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.is-active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-6px) translateX(5px);
+    }
+    .navigation {
+        display: none;
+                position: relative;
+                z-index: -1;
+                animation: hide .35s both;
+    }
+    .navigation .show{
+        display: flex;
+                    animation: show .35s both;
+    }
+}
+
+
+
+
+
+/* 服務項目 */
+
+#allPlans {
+    justify-content: center;
+    height: 30vh;
+    flex-direction: column;
+    margin-bottom: 200px;
+
+}
+
+
+
+
+/* -------------裝飾圖片-------------- */
+.cloud {
+    position: absolute;
+    z-index: -1;
+
+    left: 280px;
+    transform: rotate(10deg);
+    margin-top: 130px;
+}
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 340px;
+
+}
+
+.title h1 {
+    font-size: 8rem;
+    line-height: 100px;
+    color: #48A0F0;
+    font-family: "Braah One", serif;
+}
+
+.title h2 {
+    font-size: 2rem;
+    color: #48A0F0;
+}
+
+.heading img {
+
+    object-fit: cover;
+    width: 1200px;
+    height: 500px;
+    border-radius: 30px;
+
+    margin-top: 130px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* 平板 */
+@media (max-width: 1023px) {
+    .cloud {
+        display: none;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .title {
+        margin-left: 0;
+    }
+
+    .heading img {
+        display: none;
+    }
+
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+    .title{
+        margin-top: 100px;
+    }
+    .title h1 {
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .heading{
+        margin-bottom: 0;
+    }
+}
+
+
+/* ----------------------卡片區------------------- */
+.allCard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 200px 0px;
+
+    height: 500px;
+    background-color: transparent;
+}
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+
+    justify-content: space-between;
+
+    height: 360px;
+    width: 230px;
+
+    box-shadow: #CDEEFF 10px 10px;
+    border: none;
+    border-radius: 30px;
+
+    margin: 50px;
+
+    overflow: hidden;
+
+}
+
+.card img:hover {
+    filter: grayscale(100%);
+}
+
+.card img {
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+
+}
+
+.card-text h2 {
+    position: absolute;
+
+    font-size: 2.4rem;
+    color: #4aa38e;
+    bottom: 40px;
+    left: -10px;
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    .allCard {
+        flex-wrap: wrap;
+        height: 100vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        width: 45%;
+    }
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+    .allCard {
+        flex-wrap: wrap;
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .card-text {
+        width: 45%;
+    }
+
+    .card {
+        height: 240px;
+        width: 160px;
+    }
+
+    .card-text h2 {
+        font-size: 1rem;
+        position: absolute;
+        left: 60px;
+        bottom: 10px;
+    }
+}
+
+
+
+/*  共享辦公室優勢 */
+#container {
+    background-image: url('/images/bg-plans.png');
+    background-size: cover;
+    justify-content: space-around;
+    padding: 40px 0px;
+    height: 980px;
+}
+
+#title2 {
+    display: block;
+    flex-direction: column;
+    /* font-family: "Noto Sans TC", serif; */
+    font-family: "Braah One", serif
+}
+
+#title2 h2 {
+
+    font-size: 8rem;
+    color: rgb(72, 160, 240);
+    margin: 0 100px;
+}
+
+#title2 h3 {
+    font-size: 2rem;
+    color: rgb(72, 160, 240);
+
+    margin-left: 100px;
+    font-weight: 600;
+}
+
+.container2 {
+    justify-content: center;
+    display: flex;
+    padding: 0px 80px;
+}
+
+.cardCopy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 20px;
+    padding-right: 30px;
+}
+
+.cardCopy-list {
+    width: 600px;
+    margin: 0 30px;
+    padding: 10px;
+
+
+}
+
+.cardCopy-list h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+    margin-top: 20px;
+}
+
+
+
+.btn {
+    position: relative;
+    left: 50px;
+    bottom: -60px;
+    max-width: 200px;
+    height: 42px;
+    border-radius: 30px;
+
+    background: #48A0F0;
+    /* border: 2px solid #48A0F0; */
+
+    transform: translate3d(0px, 0%, 0px);
+    font-size: 1.2rem;
+
+    text-align: center;
+    text-decoration: none;
+    transition-delay: 0.6s;
+    overflow: hidden;
+    /* padding: 0 20px; */
+}
+
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+.btn:before {
+    background: #FFFFFF;
+    border-radius: 50% 50% 0 0;
+    transform: translateY(100%) scaleY(0.5);
+}
+
+.btn:after {
+    background: #48A0F0;
+    border-radius: 0;
+    transform: translateY(0) scaleY(1);
+}
+
+.btn div {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.btn span {
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.btn span:first-child {
+    color: #48A0F0;
+    transform: translateY(24px);
+}
+
+.btn span:last-child {
+    color: #FFFFFF;
+    transform: translateY(0);
+}
+
+.btn:hover {
+    background: #48A0F0;
+    transition: background 0.2s linear;
+    transition-delay: 0.6s;
+    color: #FFFFFF;
+}
+
+.btn:hover:after {
+    border-radius: 0 0 50% 50%;
+    transform: translateY(-100%) scaleY(0.5);
+    transition-delay: 0;
+}
+
+.btn:hover:before {
+    border-radius: 0;
+    transform: translateY(0) scaleY(1);
+    transition-delay: 0;
+}
+
+.btn:hover span:first-child {
+    transform: translateY(0);
+}
+
+.btn:hover span:last-child {
+    transform: translateY(-32px);
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    #title2 h2 {
+        font-size: 2rem;
+    }
+
+    .card-right {
+        display: none;
+    }
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+    .container2 {
+        display: flex;
+        flex-direction: column
+    }
+
+    .cardCopy {
+        padding: 0;
+        margin: 0;
+    }
+
+    .cardCopy .cardCopy-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    .cardCopy .cardCopy-list p {
+        font-size: .8rem;
+    }
+
+    .card-right #imgCycle {
+        display: none;
+    }
+    .container{
+        margin: 140px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container2{
+        margin-top: 100px;
+    }
+    #title2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #title2 h3{
+        margin-left: 10px;
+    }
+}
+
+/* ---------------換圖輪撥------------------- */
+#imgCycle li {
+    height: 100%;
+    object-fit: cover;
+    z-index: 999;
+
+}
+
+#imgCycle {
+    width: 100%;
+    height: 100%;
+
+}
+
+.card-right {
+    height: 60vh;
+    width: 600px;
+
+    overflow: hidden;
+    border-radius: 30px 30px 30px 30px;
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+#nav {
+
+    display: flex;
+
+    position: absolute;
+    left: 100px;
+    bottom: -30px;
+    z-index: 999;
+}
+
+#nav a {
+    display: inline-block;
+    /* 轉成區塊元素並水平排列 */
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    /* padding: 15px; */
+    margin: 0 4px;
+    text-decoration: none;
+    /* display: table-cell; */
+    text-align: center;
+    border-radius: 50%;
+}
+
+*/ #nav a.activeSlide {
+    background-color: #48A0F0;
+    color: #494949;
+}
+
+*/
+
+/* FAQ  */
+div#FAQ {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#FAQ {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+    align-items: center;
+
+    height: 100vh;
+}
+
+#title3 {
+    justify-content: center;
+    /* font-family: "Noto Sans TC", serif; */
+    font-family: "Braah One", serif;
+}
+
+#title3 h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 8rem;
+    color: rgb(72, 160, 240);
+    margin: 20px 0px;
+    /* padding: 10px 0px; */
+
+}
+
+#title3 h3 {
+    line-height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    color: rgb(72, 160, 240);
+    font-weight: 600;
+
+}
+
+
+
+.FAQ-right {
+    position: relative;
+}
+
+.title3 {
+    position: absolute;
+    top: 0;
+    /* 或指定具体像素值 */
+    left: 0;
+    /* 或指定具体像素值 */
+}
+
+
+
+
+
+
+
+#box1 {
+    display: block;
+
+    /* margin-top: 100px; */
+}
+
+#box1 button {
+    display: block;
+    justify-content: center;
+    text-align: left;
+    /* cursor: pointer; */
+    background-color: rgb(255, 255, 255);
+    width: 650px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(74, 163, 142);
+    border-image: initial;
+    padding: 20px 40px;
+
+    font-size: 1.2rem;
+}
+
+#box1 div {
+    display: none;
+    text-align: left;
+    width: 600px;
+    padding: 20px;
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    #FAQ {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        margin-top: -200px;
+    }
+
+    .FAQ-right {
+        margin-top: 10px;
+    }
+
+    #title3 h2 {
+        font-size: 2rem;
+        line-height: 0;
+    }
+
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+    #FAQ {
+        margin-top: 160px;
+        flex-wrap: wrap;
+    }
+
+    #box1 {
+        width: 50%;
+    }
+
+    #box1 button {
+        width: 200px;
+    }
+
+    p {
+        width: 280px;
+    }
+
+}
+
+
+
+
+
+
+/* 跑馬燈 */
+
+.marquee {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.marquee div {
+    width: 100%;
+    display: inline-block;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    white-space: nowrap;
+    animation: 20s linear 0s infinite normal none running marquee;
+}
+
+.marquee span {
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    -webkit-text-stroke: 1px #CDEEFF;
+}
+
+.marquee .span2 {
+    font-size: 5rem;
+    color: #CDEEFF;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    marquee {
+        display: none;
+    }
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+    marquee {
+        display: none;
+    }
+}
+
+
+
+/* 頁尾 */
+.footerNav {
+    background-color: #48A0F0;
+    opacity: 74%;
+    height: 300px;
+
+    display: flex;
+    justify-content: space-between;
+
+
+    padding: 10px 20px;
+}
+
+.footerNav a:visited {
+    color: #fff;
+}
+
+
+.footerNav .icon {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 200px;
+}
+
+.footerNav h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 30%
+}
+
+.footerNav .icon li img {
+    width: 40px;
+}
+
+.footerNav .logo img {
+    height: 100%;
+    text-align: left;
+}
+
+.footerNav .contact {
+    display: flex;
+}
+
+
+.footerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 140px;
+}
+
+.contact a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footerNav .menu1 {
+    padding: 10px;
+
+}
+
+.footerNav .menu2 {
+    padding: 10px;
+}
+
+.footerNav .footerMenu li {
+    margin: 20px;
+
+}
+
+.footerMenu a:hover {
+    border-bottom: 3px solid #FFF;
+    margin-bottom: -3px;
+    /* 讓文字不抖動 */
+}
+
+.Copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #48A0F0;
+    opacity: 74%;
+    color: #FFF;
+    height: 30px;
+}
+
+/* TOP */
+.goTop {
+
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    .footerNav {
+        display: none;
+    }
+}

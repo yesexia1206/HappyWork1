@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/*# sourceMappingURL=style.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    Text-decoration: none;
+    outline: none;
+}
+
+body {
+    background-size: cover;
+    line-height: 130%;
+    font-family: "Braah One", serif, "Noto Sans TC", sans-serif;
+    color: #494949;
+    background-attachment: fixed;
+}
+
+
+/* 重置標題字重 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置清單符號 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* 進度條 */
+html {
+    scroll-timeline: --page-scroll block;
+}
+
+@keyframes grow-progress {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: #002ead;
+    transform-origin: 0 0;
+    /* 修改这里的 transform-origin */
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 9999; 
+}
+
+
+
+
+/* 首頁 */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: #FFF;
+    width: 98%;
+    z-index: 999;
+
+}
+
+#topbar .logo {
+    width: 100px;
+}
+
+.logoBar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation img {
+    width: 100px;
+}
+
+.navigation button {
+    background-color: #48A0F0;
+    border: none;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.navigation button:hover {
+    background-color: #002ead;
+    transition: 0.7s;
+}
+
+#topbar .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+#topbar .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+#topbar a:visited {
+
+    color: #494949;
+
+}
+
+#topbar a:hover {
+    color: #48A0F0;
+}
+
+#topbar li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 40px;
+}
+
+
+
+
+
+
+/* 內容 */
+
+section {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 100px 0;
+    justify-content: flex-end;
+
+
+}
+
+.title-h3 {
+    position: relative;
+}
+
+.title h3::before {
+    content: '';
+    /* 必須設定。就算沒有值也要保留空值位置 */
+    background-color: #48A0F0;
+    width: 6px;
+    height: 96px;
+    /* border-radius: 99px; */
+
+    position: absolute;
+    left: -300px;
+    top: -16px;
+}
+
+.title .title-h3 {
+    width: 100px;
+    font-size: 5rem;
+    padding-bottom: 20px;
+    margin: 40px 0 0 400px;
+    color: #48A0F0;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title h2 {
+    font-size: 1.2rem;
+
+    color: #48A0F0;
+    font-weight: 600;
+    margin: 10px 0 0 130px;
+}
+
+@media (max-width: 640px) {
+    .title h3{
+        font-size: 2rem;
+        margin-right: 220px;
+    }
+}
+
+
+/* 據點區塊 */
+#location-card {
+    margin: 0;
+    font-family: "Braah One", sans-serif;
+    margin-bottom: 100px;
+    justify-content: space-around;
+}
+
+#locationName img {
+    width: 20px;
+}
+
+#locationName h2 {
+    display: flex;
+    margin: 0 320px;
+    color: #494949;
+    font-size: 1.8rem;
+}
+
+
+.block1 {
+    display: flex;
+    margin: 0 100px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card-list {
+    margin-right: 130px;
+    width: 500px;
+}
+
+.card-list img {
+    width: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 1023px) {
+    #location-card {
+        flex-wrap: wrap;
+    }
+
+    #locationName h2 {
+        width: 160px;
+        display: flex;
+        margin: 10px 72px;
+
+    }
+
+}
+
+@media (max-width: 640px) {
+    .block1 {
+        display: flex;
+        /* margin: 0 100px; */
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-list{
+        padding: 0 10px;
+        margin: 0;
+        align-items: center;
+        
+    }
+    .card-list h3{
+        margin-bottom: 8px;
+    }
+    hr{
+        display: none;
+    }
+}
+
+/* 據點圖片 */
+
+
+#locationName {
+    font-size: 2rem;
+    margin: 0 30px;
+}
+
+.pic-box {
+
+    display: flex;
+
+    justify-content: center;
+    flex: 1;
+    margin: 20px 0;
+    object-fit: contain;
+
+    overflow: hidden;
+
+}
+
+#location-card .pic-box img {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+@media (max-width: 640px) {
+    #location-card .pic-box img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+/* 據點資訊區 */
+.block1 .card-list {
+    background-color: #043AAE;
+    opacity: 66%;
+    padding: 10px 50px 0 50px;
+    box-shadow: 5px 5px #B0BAD0;
+}
+
+.block1 h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.hr1 {
+    border-top: 2px dotted #fff;
+}
+
+.block1 p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 640px) {
+    .block1 {
+        width: 45%;
+    }
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        font-size: .8rem;
+    }
+}
+
+/* 頁尾 */
+.footerNav {
+    background-color: #48A0F0;
+    opacity: 74%;
+    height: 300px;
+
+    display: flex;
+    justify-content: space-between;
+
+
+    padding: 10px 20px;
+}
+
+.footerNav a:visited {
+    color: #fff;
+}
+
+
+.footerNav .icon {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 200px;
+}
+
+.footerNav h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 30%
+}
+
+.footerNav .icon li img {
+    width: 40px;
+}
+
+.footerNav .logo img {
+    height: 100%;
+    text-align: left;
+}
+
+.footerNav .contact {
+    display: flex;
+}
+
+
+.footerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 140px;
+}
+
+.contact a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footerNav .menu1 {
+    padding: 10px;
+
+}
+
+.footerNav .menu2 {
+    padding: 10px;
+}
+
+.footerNav .footerMenu li {
+    margin: 20px;
+
+}
+
+.footerMenu a:hover {
+    border-bottom: 3px solid #FFF;
+    margin-bottom: -3px;
+    /* 讓文字不抖動 */
+}
+
+.Copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #48A0F0;
+    opacity: 74%;
+    color: #FFF;
+    height: 30px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+
+/* TOP */
+.goTop {
+
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+    .footerNav {
+        display: none;
+    }
+    .Copyright{
+        font-size: .8rem;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+}
