@@ -1298,9 +1298,9 @@ p {
     }
 }
 
-footer {
+/* footer {
     height: 30vh;
-}
+} */
 
 @keyframes fadeInUp {
     from {
@@ -1323,3 +1323,88 @@ footer {
         opacity: 1
     }
 }
+
+/*------footer開始------*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(72, 160, 240, 0.74);
+    margin-top: 150px;
+}
+
+footer .official-logo {
+    width: 485px;
+    margin: 27px 0 0 50px;
+}
+
+@media (max-width: 640px) {
+    footer .official-logo {
+        margin: 0;
+    }
+}
+
+footer .official-social {
+    margin: 0 auto 0 365px;
+    display: flex;
+    align-self: flex-end;
+}
+
+@media (max-width: 1440px) {
+    footer .official-social {
+        margin: 0 auto 0 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    footer .official-social {
+        margin: 0 auto;
+    }
+}
+
+footer .official-social img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .footer-map {
+    margin: 0 auto;
+    align-self: flex-end;
+}
+
+footer .footer-map .footer-menu {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-map .footer-menu li {
+    margin: 0 60px 40px 0;
+}
+
+@media (max-width: 640px) {
+    footer .footer-map .footer-menu li {
+        margin: 20px 20px;
+    }
+}
+
+footer .footer-map .footer-menu li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .footer-map .footer-menu li a:hover {
+    border-bottom: 3px solid #FFF;
+    margin-bottom: -3px;
+    /* 讓文字不抖動 */
+}
+
+footer small {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+}
+
+/*------footer結束------*/
