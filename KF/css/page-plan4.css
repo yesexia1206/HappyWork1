@@ -357,7 +357,7 @@ html {
 
 /* 共享辦公桌特色 */
 #feature {
-    background-image: url('./images/bg-plans.png');
+    background-image: url('../images/bg-plans.png');
 
 
     /* display: flex;
