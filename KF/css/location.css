@@ -106,7 +106,7 @@ body {
     /* 光學尺寸 */
     line-height: 1.5;
     color: #494949;
-    background-image: url(/images/background-1.png);
+    background-image: url(../images/background-1.png);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -518,7 +518,7 @@ html {
 
 /*  共享辦公室優勢 */
 #container {
-    background-image: url('/images/bg-plans.png');
+    background-image: url(../images/bg-plans.png);
     background-size: cover;
     justify-content: space-around;
     padding: 40px 0px;

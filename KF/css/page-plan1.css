@@ -360,7 +360,7 @@ html {
 
 /* 私人辦公桌特色 */
 #feature {
-    background-image: url('/images/bg-plans.png');
+    background-image: url('./images/bg-plans.png');
     background-size: cover;
     justify-content: space-around;
     padding: 40px 0px;
