@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Braah+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
 
 /* reset */
 * {
@@ -227,7 +227,7 @@ section:not(#facility) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -256,18 +256,10 @@ section:not(#facility) {
 
 .menu>li>a {
     white-space: nowrap;
-
-    color: var(--text);
 }
 
-#navG>li:nth-child(even):hover a {
-
-    border-bottom: 2px solid var(--primary2);
-}
-
-#navG>li:nth-child(odd):hover a {
-    border-bottom: 2px solid var(--primary1);
-
+#navG>li:hover a {
+    color: var(--primary1);
 }
 
 #navG {
@@ -277,60 +269,19 @@ section:not(#facility) {
     border-radius: 20px;
 }
 
-
-#quick>li>.btn3 {
-    padding: 6px 20px;
-
+#quick>li{
+    margin: 0 16px;
+}
+.btn3 {
+    padding: 6px 32px;
+border-radius: 8px;
+background-color: var(--primary1);
+    color: #fff;
 }
 
 #quick>li:nth-child(even)>.btn3 {
-    color: #fff;
 
-    background-color: var(--deep);
-}
-
-.btn3 {
-    border: none;
-    padding: 10px 15px;
-    position: relative;
-    overflow: hidden;
-    margin: 0 10px;
-}
-
-.btn3:hover {
-    color: #fff;
-    background-color: var(--primary2) !important;
-    transition: .3s .8s;
-
-}
-
-.btn3::before,
-.btn3::after {
-    content: '';
-    position: absolute;
-    width: 10%;
-    height: 20%;
-    border-color: var(--primary2);
-    border-style: solid;
-    transition: 1s;
-}
-
-.btn3::before {
-    top: 0;
-    left: 0;
-    border-width: 1px 0 0 1px;
-}
-
-.btn3::after {
-    bottom: 0;
-    right: 0;
-    border-width: 0 1px 1px 0;
-}
-
-.btn3:hover::before,
-.btn3:hover::after {
-    width: 100%;
-    height: 100%;
+    background-color: var(--primary2);
 }
 
 
@@ -345,6 +296,7 @@ section:not(#facility) {
     width: 120%;
     margin-left: -20px;
     flex: 3.5;
+    /* margin-top: -6%; */
 }
 
 #logo2 {
@@ -707,7 +659,7 @@ main>header:first-child {
 
     height: 100% !important;
     object-fit: cover;
-
+border-radius: 8px;
 }
 
 .title-deC {
@@ -1046,7 +998,10 @@ main>header:first-child {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(var(--primary1-w) 28%, transparent 28%, transparent 80%, var(--primary1-w) 80%),
+    background-image: linear-gradient(var(--primary1-w) 28%, 
+    transparent 28%, 
+    transparent 80%, 
+    var(--primary1-w) 80%),
         linear-gradient(to right, var(--primary1-w) 8%, transparent 8%, transparent 92%, var(--primary1-w) 92%);
     flex-direction: row;
 }
@@ -1094,17 +1049,14 @@ main>header:first-child {
 
 .faciL-card>span {
     transform: rotate(90deg);
-    max-height: 2rem;
-    top: 13%;
-    right: -5%;
+    height: 0;
+    width: 0;
+    top: 8%;
+    right: 3%;
     color: var(--primary1);
     position: absolute;
 }
 
-.faciL-card:nth-child(7)>span {
-    right: -27%;
-    top: 15%;
-}
 
 @media (max-width: 640px) {
     .faciL-box {
@@ -1182,6 +1134,7 @@ main>header:first-child {
 .step>h4>span {
     margin-left: 6px;
     position: relative;
+    font-size: 2.5rem;
 }
 
 #process .content {
@@ -1331,6 +1284,8 @@ footer {
     flex-wrap: wrap;
     background-color: rgba(72, 160, 240, 0.74);
     margin-top: 150px;
+    line-height: 1.2;
+    font-family: "Braah One", "Noto Sans TC", Arial, Helvetica, "微軟正黑體", sans-serif;
 }
 
 footer .official-logo {
@@ -1405,6 +1360,7 @@ footer small {
     text-align: center;
     margin: 20px 0;
     color: #fff;
+    font-size: 100%;
 }
 
 /*------footer結束------*/
