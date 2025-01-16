@@ -9,6 +9,7 @@ $(document).ready(function () {
 });
 
 
+
 // ----------------------滑鼠-----------------------
     class GlitchEffect {
         constructor() {
@@ -141,7 +142,7 @@ $(document).ready(function () {
 const scrollToTop = () => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
     });
 };
 

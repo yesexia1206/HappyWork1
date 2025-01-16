@@ -184,6 +184,8 @@ html {
     z-index: 999;
     top: 0;
 
+    box-sizing: border-box;
+
 }
 
 #topbar .logo {
@@ -234,6 +236,12 @@ html {
     justify-content: space-around;
     padding: 0 10px;
     margin: 10px;
+}
+
+#topbar a {
+
+    color: #494949;
+
 }
 
 #topbar a:visited {
@@ -360,7 +368,7 @@ html {
 
 /* 私人辦公桌特色 */
 #feature {
-    background-image: url('../images/bg-plans.png');
+    background-image: url(../images/bg-plans.png);
     background-size: cover;
     justify-content: space-around;
     padding: 40px 0px;
@@ -854,90 +862,92 @@ hr {
 
 
 /* 頁尾 */
-.footerNav {
-    background-color: #48A0F0;
-    opacity: 74%;
-    height: 300px;
-
+/*------footer開始------*/
+footer {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-
-
-    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-color: rgba(72, 160, 240, 0.74);
+    line-height: 1.2;
+    font-family: "Braah One", "Noto Sans TC", Arial, Helvetica, "微軟正黑體", sans-serif;
 }
 
-.footerNav a:visited {
+footer .official-logo {
+    width: 485px;
+    margin: 27px 0 0 50px;
+}
+
+@media (max-width: 640px) {
+    footer .official-logo {
+        margin: 0;
+    }
+}
+
+footer .official-social {
+    margin: 0 auto 0 365px;
+    display: flex;
+    align-self: flex-end;
+}
+
+@media (max-width: 1440px) {
+    footer .official-social {
+        margin: 0 auto 0 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    footer .official-social {
+        margin: 0 auto;
+    }
+}
+
+footer .official-social img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .footer-map {
+    margin: 0 auto;
+    align-self: flex-end;
+}
+
+footer .footer-map .footer-menu {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-map .footer-menu li {
+    margin: 0 60px 40px 0;
+}
+
+@media (max-width: 640px) {
+    footer .footer-map .footer-menu li {
+        margin: 20px 20px;
+    }
+}
+
+footer .footer-map .footer-menu li a {
+    font-size: 20px;
     color: #fff;
 }
 
-
-.footerNav .icon {
-    display: flex;
-    align-items: flex-end;
-    margin-right: 200px;
-}
-
-.footerNav h1 {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    width: 30%
-}
-
-.footerNav .icon li img {
-    width: 40px;
-}
-
-.footerNav .logo img {
-    height: 100%;
-    text-align: left;
-}
-
-.footerNav .contact {
-    display: flex;
-}
-
-
-.footerMenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-right: 140px;
-}
-
-.contact a {
-    display: flex;
-    align-items: flex-end;
-}
-
-.footerNav .menu1 {
-    padding: 10px;
-
-}
-
-.footerNav .menu2 {
-    padding: 10px;
-}
-
-.footerNav .footerMenu li {
-    margin: 20px;
-
-}
-
-.footerMenu a:hover {
+footer .footer-map .footer-menu li a:hover {
     border-bottom: 3px solid #FFF;
     margin-bottom: -3px;
     /* 讓文字不抖動 */
 }
 
-.Copyright {
-    display: flex;
-    justify-content: center;
-    background-color: #48A0F0;
-    opacity: 74%;
-    color: #FFF;
-    height: 30px;
+footer small {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 100%;
 }
+
+/*------footer結束------*/
 
 
 /* TOP */
