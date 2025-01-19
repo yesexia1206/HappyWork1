@@ -10,7 +10,6 @@ function checkImage() {
 
     //將每個image元素都加上判斷式：
     const imgElement = imageElement.querySelector('img');
-        const imgElementR = imageElement.querySelector('.bd-imgR'); 
 
         //條件一：
         const currentPosition = window.scrollY + window.innerHeight;
@@ -31,11 +30,9 @@ function checkImage() {
         if (imageOnWindow && imageAppear) {
         //符合出現條件，加上active此class
         imgElement.classList.add('img-active'); 
-            imgElementR.classList.add('img-active');
         } else {
         //不符合出現條件，移除active此class
         imgElement.classList.remove('img-active');
-            imgElementR.classList.remove('img-active');
         }
     }
 }
@@ -68,37 +65,28 @@ function horizontalScroll(){
         
         hori.scrollLeft =leftAmount;
         let a = 0.75 + leftAmount * 0.25 / scrollWidth;
-        locHeader.style.transform = `scale(${a})`;
+        // locHeader.style.transform = `scale(${a})`;
     
     }
 }
 // 方案區動態
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all plan items within the #plan section
+/*document.addEventListener('DOMContentLoaded', function () {
     const planItems = document.querySelectorAll('.plan-item');
 
-    // Create an intersection observer to detect when each plan-item is in the viewport
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            // When a plan-item is in view
             if (entry.isIntersecting) {
-                // Add the 'fadeInUp' class to trigger the animation
                 entry.target.classList.add('fadeInUp');
                 
-                // Optionally, you can stop observing the element after it has been triggered
-                // observer.unobserve(entry.target);
             }
         });
     }, {
-        root: null,  // viewport
-        threshold: 0.2  // trigger when 50% of the item is visible
     });
 
-    // Start observing each plan-item
     planItems.forEach(item => {
         observer.observe(item);
     });
-});
+});*/
 // 頁首carousel
 // 來源=>https://codepen.io/emilio-dominguez/pen/NWNmvbO
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,4 +131,25 @@ $(".content").hover(function () {
 $(".faciL-card").hover(function () {
     $(this).find("figure").toggleClass("animated swing");
  });
- 
+ $('.smoove').smoove({
+    // offset整數預設為像素，不加引號，%要加。
+    offset: '40%'
+});
+
+
+//--置頂按鈕
+    //捲動至top0的位置
+    $("#gotop").click(function () {
+        $("html,body").animate({scrollTop: 0}, 600);
+    });
+    //指定捲軸位置淡出淡入
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('#gotop').stop().fadeTo('fast', 1);
+            $('#BOT').stop().fadeTo('fast', 1);
+        } 
+        else {
+            $('#gotop').stop().fadeOut('fast');
+            $('#BOT').stop().fadeOut('fast');
+        }
+    });

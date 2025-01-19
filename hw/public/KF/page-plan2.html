@@ -5,15 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>快樂工作共享辦公室|共享方案 共享辦公桌</title>
+    <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/page-plan2.css">
 </head>
 
 <body>
     <!--------------------------- 滑鼠 --------------------------------->
-    <!-- <div class="curzr" hidden></div> -->
+    <div class="curzr" hidden></div>
     <!--------------------------- 進度條 --------------------------------->
     <div id="progress"></div>
     
+    <!-- // 頁首區 
+    <header id="topbar">
+        // 導覽列 
+        <nav class="navigation">
+            // LOGO 
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="快樂共享辦公室LOGO" title="快樂共享辦公室">
+                </a>
+            </h1>
+            <h2>快樂工作共享辦公室</h2>
+        </nav>
+
+        // 主選單 
+
+        <div class="navbar">
+            <button class="hamburger">
+                <span class="bar"></span>
+                // <span class="bar"></span> 
+                <span class="bar"></span>
+            </button>
+            <nav class="navigation">
+                <ul class="menu">
+                    <li><a href="">服務據點</a></li>
+                    <li><a href="">共享方案</a></li>
+                    <li><a href="">活動消息</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+
+                <button><img src="./images/reservation-button.svg" alt=""></button>
+            </nav>
+        </div>
+    </header> -->
+
     <!-- 頁首區 -->
     <header id="topbar">
         <!-- 導覽列 -->
@@ -26,9 +61,9 @@
             </h1>
             <h2>快樂工作共享辦公室</h2>
         </nav>
-    
+
         <!-- 主選單 -->
-    
+
         <div class="navbar">
             <button class="hamburger">
                 <span class="bar"></span>
@@ -42,7 +77,7 @@
                     <li><a href="https://yesexia1206.github.io/LIN16/aboutUs">關於我們</a></li>
                     <li><a href="https://yesexia1206.github.io/HappyWork/">會員中心</a></li>
                 </ul>
-    
+
                 <button>
                     <a href="https://yesexia1206.github.io/LIN16/reservationForm">
                         <img src="./images/reservation-button.svg" alt="">
@@ -252,16 +287,55 @@
         </section>
 
 
-        <!-- 頁尾 -->
+        <!-- // 頁尾 
 
 
         <footer>
+            // LOGO 
+            <nav class="footerNav">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <img src="./images/location-icon.svg" alt="快樂共享辦公室LOGO" title="快樂共享辦公室">
+                    </a>
+                </h1>
+                <ul class="icon">
+                    <li><a href=""><img src="./images/facebook-icon.svg"></a></li>
+                    <li><a href=""><img src="./images/instagram-icon.svg"></a></li>
+
+                </ul>
+                // icon按鈕 
+                <div class="contact">
+
+                    // 主選單 
+                    <div class="footerMenu">
+                        <ul class="menu1">
+                            <li><a href="">服務據點</a></li>
+                            <li><a href="">共享方案</a></li>
+                            <li><a href="">會員中心</a></li>
+                        </ul>
+                        <ul class="menu2">
+                            <li><a href="">預約參觀</a></li>
+                            <li><a href="">關於我們</a></li>
+                            <li><a href="">隱私政策</a></li>
+                        </ul>
+                    </div>
+                    <a class="goTop" href="#">
+                        <img src="./images/top-button.svg" alt="">
+                    </a>
+                </div>
+
+            </nav>
+            <div class="Copyright">Copyright © 2024 HAPPY WORK.</div>
+        </footer> -->
+
+        <!-- 頁尾 -->
+        <footer>
             <h1 class="official-logo">
-                <a href="index.html">
+                <a href="https://yesexia1206.github.io/HappyWork1/">
                     <img src="./images/HW-LOGO.svg" alt="" />
                 </a>
             </h1>
-    
+
             <div class="official-social">
                 <a href="#">
                     <img src="./images/fb-icon.svg" alt="HappyWork-FB" title="HappyWork-FB" />
@@ -270,7 +344,7 @@
                     <img src="./images/ig-icon.svg" alt="HappyWork-IG" title="HappyWork-IG" />
                 </a>
             </div>
-    
+
             <nav class="footer-map">
                 <ul class="footer-menu">
                     <li><a href="https://yesexia1206.github.io/HappyWork1/KF/location.html">共享方案</a></li>
@@ -281,27 +355,44 @@
                     <li><a href="https://yesexia1206.github.io/LIN16/privacy">隱私政策</a></li>
                 </ul>
             </nav>
-    
-            <small>Copyright © 2024 HAPPY WORK. All Rights Reserved</small>
-        </footer>
-        <a class="goTop" href="#">
-            <img src="./images/top-button.svg" alt="">
-        </a>
 
+            <small>Copyright © 2024 HAPPY WORK. All Rights Reserved</small>
+            <!-- 至頂按鈕 -->
+            <div id="gotop"><img src="./images/top-button.svg" alt=""></div>
+        </footer>
     </section>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- jq套件：smoove動態效果 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
 
     <!-- 啟用jq套件：一定釋放載套件檔案之後，必須先執行套件 -->
     <script>
-        // 所有.smoove共用
-        $('.smoove').smoove({
-            // offset整數預設為像素，不加引號，%要加。
-            offset: '40%'
-        });
+        
+        $(document).ready(function() {
+  // 檢查螢幕尺寸，決定是否初始化 Smoove
+  if ($(window).width() > 768) {
+    $('.smoove').smoove({
+      offset: '20%'
+    });
+  }
+
+  // 監聽窗口大小變化
+  $(window).resize(function() {
+    var screenWidth = $(this).width();
+    if (screenWidth > 768) {
+      // 初始化 Smoove
+      $('.smoove').smoove({
+        offset: '20%'
+      });
+    } else {
+      // 移除 Smoove 效果（具體方法依 Smoove 插件而定）
+      // 例如：
+      $('.smoove').data('.smoove').destroy();
+    }
+  });
+});
 
     </script>
 
