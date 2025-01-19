@@ -2,8 +2,10 @@
 @charset "UTF-8";
 /*# sourceMappingURL=style.css.map */
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
-
+@font-face {
+    font-family: 'SundayTime';
+    src: url('../sunday-time.regular.ttf') format("truetype");
+}
 
 
 
@@ -146,7 +148,7 @@ a {
 
 
 
-/* 進度條 */
+/* ---------------------------------------------------進度條 */
 html {
     scroll-timeline: --page-scroll block;
 }
@@ -167,7 +169,7 @@ html {
     top: 0;
     width: 100%;
     height: 4px;
-    background: #002ead;
+    background: #B7E1E2;
     transform-origin: 0 0;
     /* 修改这里的 transform-origin */
     animation: grow-progress auto linear;
@@ -184,6 +186,162 @@ html {
 
 
 
+
+/* //首頁 
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: #FFF;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+
+#topbar .logo {
+    width: 100px;
+}
+
+.logoBar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation img {
+    width: 100px;
+}
+
+.navigation a {
+    background-color: #48A0F0;
+    border: none;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.navigation a:hover {
+    background-color: #002ead;
+    transition: 0.7s;
+}
+
+#topbar .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+#topbar .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#topbar a:visited {
+
+    color: #494949;
+
+}
+
+#topbar a:hover {
+    color: #48A0F0;
+}
+
+#topbar li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 40px;
+}
+
+
+
+
+
+//平板
+@media (max-width: 1023px) {
+    #topbar {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        border-radius: 15px;
+    }
+
+    .menu a {
+        color: white;
+        margin: 20px;
+    }
+
+    .navigation {
+        display: flex;
+        order: 1;
+        padding: 15px;
+    }
+
+    .navigation a {
+        margin: 0 5px;
+    }
+
+    //手機以上
+    @media (min-width: 641px) {
+
+        #topbar h2 {
+            display: none;
+        }
+    }
+
+
+
+    //漢堡按鈕開始
+    .hamburger {
+        background-color: #48A0F0;
+        border: none;
+
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 24px;
+        height: 3px;
+        border-color: #444;
+        margin: 5px auto;
+    }
+
+    .hamburger.is-active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(11px);
+    }
+
+    .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(11px);
+    }
+
+} */
 
 /* 首頁 */
 /* Topbar */
@@ -278,67 +436,40 @@ html {
 
 
 
-
 /* 服務項目 */
 
 #allPlans {
     justify-content: center;
-    height: 30vh;
     flex-direction: column;
-    margin-bottom: 200px;
-
+    /* margin-bottom: 200px; */
 }
 
 
 
 
-/* -------------裝飾圖片-------------- */
 
-.title {
+
+#title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     height: 400px;
-    margin-left: 800px;
-
-    position: relative;
 }
 
-.title h1 {
+#title h1 {
     font-size: 2rem;
     color: #494949;
-    font-family: "Braah One", serif;
     align-items: flex-start;
 }
 
-.title h2 {
-    font-size: 1.8rem;
+#title h2 {
+    font-size: 4rem;
     color: #48A0F0;
     align-items: flex-start;
-
+    font-family: 'SundayTime';
 }
 
-.title::before {
-    content: '';
-    height: 32px;
-    width: 10px;
-    left: -22px;
-    bottom: 206px;
-    z-index: 1;
-    background-color: #48A0F0;
-    border-radius: 99px;
-
-    position: absolute;
-}
-
-.title::after {
-    content: '';
-    background-image: url(../images/pic-title.png);
-    z-index: -1;
-
-    position: absolute;
-}
 
 
 /* 平板 */
@@ -366,10 +497,15 @@ html {
 
 /* 手機 */
 @media (max-width: 640px) {
-
+    #title{
+        margin-left: 1px;
+    }
     .title h1 {
         font-size: 2rem;
         line-height: 32px;
+    }
+    #title2{
+        margin-left: 8px;
     }
 }
 
@@ -384,15 +520,14 @@ html {
     height: 500px;
     background-color: transparent;
 }
-
+.card-name{
+    margin: 0 40px;
+}
 .card-name-item {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-}
-
-.card-name {
-    margin: 0 120px 0 80px;
+    white-space: nowrap;
 }
 
 .card-name h2 {
@@ -402,6 +537,7 @@ html {
 
 .card-name span {
     font-size: 1.8rem;
+    margin-left: 32px;
 }
 
 
@@ -413,10 +549,14 @@ html {
 .container {
     height: 70vh;
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-}
+    justify-content: center;
 
+    overflow: hidden;
+}
+.card-out{
+    display: flex;
+    flex-direction: row;
+}
 .border {
     height: 369px;
     width: 290px;
@@ -433,43 +573,49 @@ html {
 .card {
     height: 379px;
     width: 300px;
-    background: grey;
+
     border-radius: 10px;
     transition: background 0.8s;
     overflow: hidden;
-    background: black;
+
     box-shadow: 0 70px 63px -60px #48A0F0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 8px;
 }
 
 
 .card0 {
-    background: url(../images/sitting-at-the-cubicle-desk-happily-making-phone-c.png) center center no-repeat;
+    background: url('../images/sitting-at-the-cubicle-desk-happily-making-phone-c.png') center center no-repeat;
     background-size: cover;
+    backdrop-filter: blur(5px);
 }
 
 .card0:hover {
-    background: url(../images/sitting-at-the-cubicle-desk-happily-making-phone-c.png) left center no-repeat;
+    background: url('../images/sitting-at-the-cubicle-desk-happily-making-phone-c.png') left center no-repeat;
     background-size: 600px;
+    backdrop-filter: blur(5px);
 }
 
 .card0:hover h2 {
     opacity: 1;
+    font-size: 2rem;
 }
 
 .card0:hover .fa {
     opacity: 1;
 }
 
-.card0 h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.card h2 {
+    font-family: 'Noto Sans TC', sans-serif;
     color: white;
     margin: 20px;
     opacity: 0;
     transition: opacity 1s;
+    font-size: 1.8rem;
+    
 }
 
 .card0 .fa {
@@ -495,12 +641,12 @@ html {
 
 
 .card1 {
-    background: url(../images/page2-shareoffice.png) center center no-repeat;
+    background: url('../images/page2-shareoffice.png') center center no-repeat;
     background-size: cover;
 }
 
 .card1:hover {
-    background: url(../images/page2-shareoffice.png) left center no-repeat;
+    background: url('../images/page2-shareoffice.png') left center no-repeat;
     background-size: 600px;
 }
 
@@ -513,7 +659,7 @@ html {
 }
 
 .card1 h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Noto Sans TC", serif;
     color: white;
     margin: 20px;
     opacity: 0;
@@ -541,12 +687,12 @@ html {
 
 
 .card2 {
-    background: url(../images/INDEPENDENT\ OFFICE.png) center center no-repeat;
+    background: url('../images/INDEPENDENT\ OFFICE.png') center center no-repeat;
     background-size: cover;
 }
 
 .card2:hover {
-    background: url(../images/INDEPENDENT\ OFFICE.png) left center no-repeat;
+    background: url('../images/INDEPENDENT\ OFFICE.png') left center no-repeat;
     background-size: 600px;
 }
 
@@ -587,12 +733,12 @@ html {
 
 
 .card3 {
-    background: url(../images/VIRTUAL\ OFFICE.png) center center no-repeat;
+    background: url('../images/VIRTUAL\ OFFICE.png') center center no-repeat;
     background-size: cover;
 }
 
 .card3:hover {
-    background: url(../images/VIRTUAL\ OFFICE.png) left center no-repeat;
+    background: url('../images/VIRTUAL\ OFFICE.png') left center no-repeat;
     background-size: 600px;
 }
 
@@ -651,6 +797,7 @@ html {
 
     .card-name span {
         font-size: .8rem;
+        margin-left: 8px;
     }
 
     .card {
@@ -662,12 +809,17 @@ html {
 /* 手機 */
 @media (max-width: 640px) {
     .container {
-        height: 30vh;
+        height: 70vh;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        
     }
 
     .card {
-        width: 80px;
         height: 160px;
+        width: 115px;
+        margin: 0 16px;
     }
 
     .card-name h2 {
@@ -680,7 +832,7 @@ html {
 
 /*  共享辦公室優勢 */
 #container {
-    background-image: url(../images/bg-plans.png);
+    background-image: url('../images/bg-plans.png');
     background-size: cover;
     justify-content: space-around;
     padding: 40px 0px;
@@ -691,19 +843,20 @@ html {
     display: block;
     flex-direction: column;
     /* font-family: "Noto Sans TC", serif; */
-    font-family: "Braah One", serif
+    font-family: 'SundayTime';
 }
 
+/* 改動 */
 #title2 h2 {
 
-    font-size: 8rem;
+    font-size: 5rem;
     color: rgb(72, 160, 240);
     margin: 0 100px;
 }
 
-#title2 h3 {
+#title2 h1 {
     font-size: 2rem;
-    color: rgb(72, 160, 240);
+    color: #494949;
 
     margin-left: 100px;
     font-weight: 600;
@@ -737,15 +890,12 @@ html {
     color: rgb(73, 73, 73);
     margin-top: 20px;
 }
-
-
-
-.btn {
+ .btn {
     position: relative;
     left: 50px;
     bottom: -60px;
     max-width: 200px;
-    height: 42px;
+    height: 50px;
     border-radius: 30px;
 
     background: #48A0F0;
@@ -761,7 +911,7 @@ html {
     /* padding: 0 20px; */
 }
 
-.btn:before,
+ .btn:before,
 .btn:after {
     content: '';
     position: absolute;
@@ -772,19 +922,19 @@ html {
     transition: all 0.6s ease;
 }
 
-.btn:before {
+ .btn:before {
     background: #FFFFFF;
     border-radius: 50% 50% 0 0;
     transform: translateY(100%) scaleY(0.5);
 }
 
-.btn:after {
+ .btn:after {
     background: #48A0F0;
     border-radius: 0;
     transform: translateY(0) scaleY(1);
 }
 
-.btn div {
+ .btn div {
     position: relative;
     top: 0px;
     left: 0px;
@@ -794,7 +944,7 @@ html {
     overflow: hidden;
 }
 
-.btn span {
+ .btn span {
     position: absolute;
     left: 0px;
     top: 9px;
@@ -806,17 +956,17 @@ html {
     transition: transform 0.5s ease;
 }
 
-.btn span:first-child {
+ .btn span:first-child {
     color: #48A0F0;
     transform: translateY(24px);
 }
 
-.btn span:last-child {
+ .btn span:last-child {
     color: #FFFFFF;
     transform: translateY(0);
 }
 
-.btn:hover {
+ .btn:hover {
     background: #48A0F0;
     transition: background 0.2s linear;
     transition-delay: 0.6s;
@@ -842,7 +992,6 @@ html {
 .btn:hover span:last-child {
     transform: translateY(-32px);
 }
-
 /* 平板 */
 @media (max-width: 1023px) {
     #title2 h2 {
@@ -856,6 +1005,9 @@ html {
 
 /* 手機 */
 @media (max-width: 640px) {
+    #title2 h2 {
+        margin: 0 1px;
+    }
     .container2 {
         display: flex;
         flex-direction: column
@@ -940,12 +1092,12 @@ html {
 /* FAQ  */
 div#FAQ {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 #FAQ {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-bottom: 100px;
     align-items: center;
 
@@ -968,7 +1120,7 @@ div#FAQ {
 
 }
 
-#title3 h3 {
+#title3 h1 {
     display: flex;
     justify-content: flex-start;
     font-size: 2rem;
@@ -977,19 +1129,6 @@ div#FAQ {
 
 }
 
-
-
-.FAQ-right {
-    position: relative;
-}
-
-.title3 {
-    position: absolute;
-    top: 0;
-    /* 或指定具体像素值 */
-    left: 0;
-    /* 或指定具体像素值 */
-}
 
 
 
@@ -1003,28 +1142,39 @@ div#FAQ {
     /* margin-top: 100px; */
 }
 
-#box1 button {
+#box1 .QA{
     display: block;
     justify-content: center;
     text-align: left;
-    /* cursor: pointer; */
-    background-color: rgb(255, 255, 255);
-    width: 650px;
-    margin-bottom: 10px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(74, 163, 142);
+    width: 470px;
+    
     border-image: initial;
-    padding: 20px 40px;
-
     font-size: 1.2rem;
 }
 
 #box1 div {
     display: none;
     text-align: left;
-    width: 600px;
-    padding: 20px;
+    width: 400px;
+}
+#box1 h2:hover {
+    background-color: rgb(199, 245, 234);
+    /* color: rgb(74, 163, 142); */
+}
+#box1 h2 .active p {
+        display: block;
+    }
+#box1  .QA h2{
+        margin-bottom: 10px;
+    border:1px solid rgb(74, 163, 142);
+    font-size: 1.4rem;
+    padding: 8px;
+    }
+
+#box1 .QA p{
+    display: none;
+line-height: 1.5;
+margin-bottom: 40px;
 }
 
 /* 平板 */
@@ -1041,33 +1191,23 @@ div#FAQ {
         margin-top: 10px;
     }
 
-    #title3 h2 {
-        font-size: 2rem;
-        line-height: 0;
-    }
-
-    #title h3 {
-        margin-bottom: 40px;
-    }
 
 }
 
 /* 手機 */
 @media (max-width: 640px) {
-    #FAQ {
-        margin-top: 160px;
-    }
-
     #box1 {
         width: 50%;
+        margin-top: 32px;
+        margin-left: -100px;
     }
-
-    #box1 button {
-        width: 200px;
+    #box1 .QA h2{
+        width: 306px;
+        font-size: 1.2rem;
     }
-
     p {
-        width: 280px;
+        width: 300px;
+        font-size: .8rem;
     }
 
 }
@@ -1135,6 +1275,108 @@ div#FAQ {
 }
 
 
+
+ /* 頁尾 
+.footerNav {
+    background-color: #48A0F0;
+    opacity: 74%;
+    height: 300px;
+
+    display: flex;
+    justify-content: space-between;
+
+
+    padding: 10px 20px;
+}
+
+.footerNav a:visited {
+    color: #fff;
+}
+
+
+.footerNav .icon {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 200px;
+}
+
+.footerNav h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 30%
+}
+
+.footerNav .icon li img {
+    width: 40px;
+}
+
+.footerNav .logo img {
+    height: 100%;
+    text-align: left;
+}
+
+.footerNav .contact {
+    display: flex;
+}
+
+
+.footerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 140px;
+}
+
+.contact a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footerNav .menu1 {
+    padding: 10px;
+
+}
+
+.footerNav .menu2 {
+    padding: 10px;
+}
+
+.footerNav .footerMenu li {
+    margin: 20px;
+
+}
+
+.footerMenu a:hover {
+    border-bottom: 3px solid #FFF;
+    margin-bottom: -3px;
+     讓文字不抖動 
+}
+
+.Copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #48A0F0;
+    opacity: 74%;
+    color: #FFF;
+    height: 30px;
+}
+
+ TOP 
+.goTop {
+
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+ 平板 
+@media (max-width: 1023px) {
+    .footerNav {
+        display: none;
+    }
+} */
 
 /*------footer開始------*/
 footer {
@@ -1224,17 +1466,21 @@ footer small {
 /*------footer結束------*/
 
 /* TOP */
-.goTop {
-
+#gotop {
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 20px;
     cursor: pointer;
+    z-index: 999;
 }
 
-/* 平板 */
-@media (max-width: 1023px) {
-    .footerNav {
-        display: none;
+@media (max-width: 768px) {
+    #gotop{
+        bottom: 60px;
+        right: 10px;
+    }
+    #gotop img{
+        height: 75px;
     }
 }

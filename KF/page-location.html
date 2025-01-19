@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快樂工作共享辦公室 | 服務據點</title>
+    <title>快樂工作共享辦公室|服務據點</title>
+    <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/page-location.css">
 </head>
 
@@ -12,10 +13,46 @@
 <body background="./images/background-1.png">
 
     <!--------------------------- 滑鼠 --------------------------------->
-    <!-- <div class="curzr" hidden></div> -->
+    <div class="curzr" hidden></div>
     <!--------------------------- 進度條 --------------------------------->
 
     <div id="progress"></div>
+
+    <!-- //頁首區
+    <header id="topbar">
+        //導覽列
+        <nav class="logoBar">
+            //LOGO
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="快樂共享辦公室LOGO" title="快樂共享辦公室">
+                </a>
+            </h1>
+            <h2>快樂工作共享辦公室</h2>
+        </nav>
+//主選單
+
+        <div class="navigation">
+
+            <a href="#" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+
+            <ul class="menu">
+                <li><a href="">服務據點</a></li>
+                <li><a href="">共享方案</a></li>
+                <li><a href="">活動消息</a></li>
+                <li><a href="">會員中心</a></li>
+            </ul>
+
+                <button><img src="./images/reservation-button.svg" alt=""></button>
+            </nav>
+        </div>
+    </header> -->
+
     <!-- 頁首區 -->
     <header id="topbar">
         <!-- 導覽列 -->
@@ -28,9 +65,9 @@
             </h1>
             <h2>快樂工作共享辦公室</h2>
         </nav>
-    
+
         <!-- 主選單 -->
-    
+
         <div class="navbar">
             <button class="hamburger">
                 <span class="bar"></span>
@@ -44,7 +81,7 @@
                     <li><a href="https://yesexia1206.github.io/LIN16/aboutUs">關於我們</a></li>
                     <li><a href="https://yesexia1206.github.io/HappyWork/">會員中心</a></li>
                 </ul>
-    
+
                 <button>
                     <a href="https://yesexia1206.github.io/LIN16/reservationForm">
                         <img src="./images/reservation-button.svg" alt="">
@@ -246,16 +283,55 @@
             </div>
 
 
-            <!-- 頁尾 -->
+            <!-- //頁尾
 
 
             <footer>
+                //LOGO
+                <nav class="footerNav">
+                    <h1 class="logo">
+                        <a href="./index.html">
+                            <img src="./images/happywork-footer.svg" alt="快樂共享辦公室LOGO" title="快樂共享辦公室">
+                        </a>
+                    </h1>
+                    <ul class="icon">
+                        <li><a href=""><img src="./images/facebook-icon.svg"></a></li>
+                        <li><a href=""><img src="./images/instagram-icon.svg"></a></li>
+
+                    </ul>
+                    //icon按鈕
+                    <div class="contact">
+
+                        //主選單
+                        <div class="footerMenu">
+                            <ul class="menu1">
+                                <li><a href="">服務據點</a></li>
+                                <li><a href="">共享方案</a></li>
+                                <li><a href="">會員中心</a></li>
+                            </ul>
+                            <ul class="menu2">
+                                <li><a href="">預約參觀</a></li>
+                                <li><a href="">關於我們</a></li>
+                                <li><a href="">隱私政策</a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                            <img src="./images/top-button.svg" alt="">
+                        </a>
+                    </div>
+
+                </nav>
+                <div class="Copyright">Copyright © 2024 HAPPY WORK.</div>
+            </footer> -->
+
+            <!-- 頁尾 -->
+            <footer>
                 <h1 class="official-logo">
-                    <a href="index.html">
+                    <a href="https://yesexia1206.github.io/HappyWork1/">
                         <img src="./images/HW-LOGO.svg" alt="" />
                     </a>
                 </h1>
-        
+
                 <div class="official-social">
                     <a href="#">
                         <img src="./images/fb-icon.svg" alt="HappyWork-FB" title="HappyWork-FB" />
@@ -264,7 +340,7 @@
                         <img src="./images/ig-icon.svg" alt="HappyWork-IG" title="HappyWork-IG" />
                     </a>
                 </div>
-        
+
                 <nav class="footer-map">
                     <ul class="footer-menu">
                         <li><a href="https://yesexia1206.github.io/HappyWork1/KF/location.html">共享方案</a></li>
@@ -275,13 +351,11 @@
                         <li><a href="https://yesexia1206.github.io/LIN16/privacy">隱私政策</a></li>
                     </ul>
                 </nav>
-        
-                <small>Copyright © 2024 HAPPY WORK. All Rights Reserved</small>
-            </footer>
-            <a class="goTop" href="#">
-                <img src="./images/top-button.svg" alt="">
-            </a>
 
+                <small>Copyright © 2024 HAPPY WORK. All Rights Reserved</small>
+                <!-- 至頂按鈕 -->
+                <div id="gotop"><img src="./images/top-button.svg" alt=""></div>
+            </footer>
         </section>
 
 
@@ -300,6 +374,23 @@
                 timeout: 2000,
             });
 
+        });
+
+        //--置頂按鈕
+        //捲動至top0的位置
+        $("#gotop").click(function () {
+            $("html,body").animate({ scrollTop: 0 }, 600);
+        });
+        //指定捲軸位置淡出淡入
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('#gotop').stop().fadeTo('fast', 1);
+                $('#BOT').stop().fadeTo('fast', 1);
+            }
+            else {
+                $('#gotop').stop().fadeOut('fast');
+                $('#BOT').stop().fadeOut('fast');
+            }
         });
     </script>
 
