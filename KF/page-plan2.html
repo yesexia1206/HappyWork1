@@ -56,19 +56,17 @@
             <!-- LOGO -->
             <h1 class="logo">
                 <a href="https://yesexia1206.github.io/HappyWork1/">
-                    <img src="./images/logo.png" alt="快樂共享辦公室LOGO" title="快樂共享辦公室">
+                    <img src="./images/HW-LOGO-blue.png" alt="快樂工作共享辦公室LOGO" title="快樂工作共享辦公室">
                 </a>
             </h1>
-            <h2>快樂工作共享辦公室</h2>
+            <!-- <h2>快樂工作共享辦公室</h2> -->
         </nav>
 
         <!-- 主選單 -->
 
         <div class="navbar">
             <button class="hamburger">
-                <span class="bar"></span>
-                <!-- <span class="bar"></span> -->
-                <span class="bar"></span>
+                <span></span>
             </button>
             <nav class="navigation">
                 <ul class="menu">
@@ -399,6 +397,37 @@
 
     <!-- 自訂Jquery -->
     <script src="./js/script.js"></script>
+
+    <script>
+        // 選取需要的元素
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.navbar .navigation');
+
+        // 添加漢堡按鈕的HTML結構
+        hamburger.innerHTML = '<span></span>';
+
+        // 點擊事件處理
+        hamburger.addEventListener('click', () => {
+            // 切換漢堡按鈕的動畫類別
+            hamburger.classList.toggle('active');
+            // 切換選單的顯示狀態
+            navMenu.classList.toggle('active');
+        });
+
+        // 點擊選單項目後關閉選單
+        document.querySelectorAll('.menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // 點擊預約按鈕後也關閉選單
+        document.querySelector('.navigation button').addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    </script>
 
 
 </body>

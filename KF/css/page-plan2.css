@@ -274,7 +274,7 @@ html {
 }
 
 #topbar .logo {
-    width: 100px;
+    width: 121px;
 }
 
 .logoBar {
@@ -343,6 +343,102 @@ html {
     display: flex;
     justify-content: space-around;
     margin: 0 40px;
+}
+
+
+
+
+/* 漢堡按鈕樣式 */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+/* 漢堡按鈕的三條線 */
+.hamburger::before,
+.hamburger::after,
+.hamburger span {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #494949;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    top: 8px;
+}
+
+.hamburger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger::after {
+    bottom: 8px;
+}
+
+/* 漢堡按鈕點擊後的動畫效果 */
+.hamburger.active::before {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active span {
+    opacity: 0;
+}
+
+.hamburger.active::after {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* RWD 設定 */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #topbar .navigation {
+        padding: 0;
+    }
+
+    .navbar .navigation {
+        position: fixed;
+        top: 60px; /* 配合topbar高度 */
+        left: -100%;
+        width: 100%;
+        /* height: calc(100vh - 60px); */
+        background-color: #FFF;
+        flex-direction: column;
+        transition: 0.3s;
+        justify-content: center;/**/
+    }
+
+    .navbar .navigation.active {
+        left: 0;
+    }
+
+    #topbar .menu {
+        flex-direction: column;
+        width: 50%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #topbar .menu li {
+        margin: 15px 0;
+    }
+
+    .navigation button {
+        margin: 20px auto;
+    }
 }
 
 
