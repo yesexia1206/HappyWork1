@@ -916,7 +916,7 @@ main>header:first-child {
     background-color: #fff;
     margin: 1vh 0;
     padding: 0 5%;
-    height: 150px;
+    /* height: 150px; */
 }
 
 .plan-conT {
@@ -1024,7 +1024,7 @@ main>header:first-child {
     }
 
     .plan-item>figure {
-        height: 15vh;
+        /* height: 15vh; */
     }
 
     .feature-conT {
@@ -1134,6 +1134,9 @@ main>header:first-child {
 @media (max-width: 640px) {
     #feature {
         height: 100vh !important;
+    }
+    #feature .col-wrap {
+        padding-top: 9%;
     }
 
     .col-flex {
@@ -1448,7 +1451,7 @@ p {
     .step {
         flex: none;
         width: 48%;
-        margin-top: 3%;
+        margin-top: 10%;
     }
 
     .step>h4 {
